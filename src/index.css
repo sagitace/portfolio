@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+    background-color: #2b2d42;
+}
+
+
+/* 
+Color Palatte:
+
+Body = #2b2d42
+Text = #edf2f4
+Accent = #ef233c
+
+*/
