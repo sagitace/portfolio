@@ -3,8 +3,22 @@ import { IoIosArrowDropright  } from "react-icons/io";
 
 const Home = () => {
     return(
+        
         <div name="home" className="w-full h-screen">
-
+            <div class="area" >
+                <ul class="circles">
+                    <li className="square-up"></li>
+                    <li className="square-up"></li>
+                    <li className="square-up"></li>
+                    <li className="square-up"></li>
+                    <li className="square-up"></li>
+                    <li className="square-up"></li>
+                    <li className="square-up"></li>
+                    <li className="square-up"></li>
+                    <li className="square-up"></li>
+                    <li className="square-up"></li>
+                </ul>
+            </div>
             <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-[90vh]">
                 <p className="text-red-500 text-2xl">Hi there 👋, I am</p>
                 <h1 className="text-4xl sm:text-5xl font-bold text-[#edf2f4]">Aaron Labini</h1>
