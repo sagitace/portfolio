@@ -1,10 +1,12 @@
 import React from "react";
 import Nav from "./components/Nav";
+import Home from "./components/Home";
 
 export default function App() {
   return (
-    <div className="h-[100vh] overflow-hidden">
+    <div className="">
       <Nav />
+      <Home />
     </div>
   );
 }

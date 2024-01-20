@@ -32,10 +32,14 @@ const Nav = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center h-18 max-w-[1240px] mx-auto px-4 text-white">
+    <nav className="flex justify-between items-center h-19 max-w-[1240px] mx-auto px-4 text-[#edf2f4]">
       {" "}
       <h1 className="text-xl font-bold">
-        <a href="#About" onClick={() => handleLinkClick("About")}>
+        <a
+          href="#About"
+          onClick={() => handleLinkClick("About")}
+          className="text-[#edf2f4]"
+        >
           {" "}
           Aaron.{" "}
         </a>{" "}
@@ -46,12 +50,12 @@ const Nav = () => {
             href="#Home"
             onClick={() => handleLinkClick("Home")}
             className={`tracking-widest relative group ${
-              activeLink === "Home" ? "text-red-400" : "text-white/90"
+              activeLink === "Home" ? "text-red-400" : "text-[#edf2f4]"
             }`}
           >
             {" "}
             Home{" "}
-            <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform" />
+            <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-500" />
           </a>{" "}
         </li>{" "}
         <li className="p-4">
@@ -59,12 +63,12 @@ const Nav = () => {
             href="#About"
             onClick={() => handleLinkClick("About")}
             className={`tracking-widest relative group ${
-              activeLink === "About" ? "text-red-400" : "text-white/90"
+              activeLink === "About" ? "text-red-400" : "text-[#edf2f4]"
             }`}
           >
             {" "}
             About{" "}
-            <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform" />
+            <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-500" />
           </a>{" "}
         </li>{" "}
         <li className="p-4">
@@ -72,12 +76,12 @@ const Nav = () => {
             href="#Skills"
             onClick={() => handleLinkClick("Skills")}
             className={`tracking-widest relative group ${
-              activeLink === "Skills" ? "text-red-400" : "text-white/90"
+              activeLink === "Skills" ? "text-red-400" : "text-[#edf2f4]"
             }`}
           >
             {" "}
             Skills{" "}
-            <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform" />
+            <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-500" />
           </a>{" "}
         </li>{" "}
         <li className="p-4">
@@ -85,12 +89,12 @@ const Nav = () => {
             href="#Projects"
             onClick={() => handleLinkClick("Projects")}
             className={`tracking-widest relative group ${
-              activeLink === "Projects" ? "text-red-400" : "text-white/90"
+              activeLink === "Projects" ? "text-red-400" : "text-[#edf2f4]"
             }`}
           >
             {" "}
             Projects{" "}
-            <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform" />
+            <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-500" />
           </a>{" "}
         </li>{" "}
         <li className="p-4">
@@ -98,18 +102,18 @@ const Nav = () => {
             href="#Contact"
             onClick={() => handleLinkClick("Contact")}
             className={`tracking-widest relative group ${
-              activeLink === "Contact" ? "text-red-400" : "text-white/90"
+              activeLink === "Contact" ? "text-red-400" : "text-[#edf2f4]"
             }`}
           >
             {" "}
             Contact{" "}
-            <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform" />
+            <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-500" />
           </a>{" "}
         </li>{" "}
         <li className="p-4">
           <a
             href="#Resume"
-            className="bg-transparent hover:bg-red-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+            className="bg-transparent hover:bg-red-500 text-[#edf2f4] font-semibold hover:text-[#edf2f4] py-2 px-4 border border-red-500 hover:border-transparent rounded ease-in-out duration-500"
           >
             {" "}
             Resume{" "}
@@ -134,14 +138,14 @@ const Nav = () => {
           <FaGithub className="h-6 w-6" />
         </a>{" "}
       </div>{" "}
-      <div onClick={handleNav} className="block md:hidden">
+      <div onClick={handleNav} className="block md:hidden z-[50]">
         {" "}
         {!nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}{" "}
       </div>{" "}
       <div
         className={
           !nav
-            ? "fixed left-0 top-0 w-[60%] h-full border-r-gray-900 bg-[#2b2d42] ease-in-out duration-500 block md:hidden"
+            ? "fixed left-0 top-0 w-[100%] h-full border-r-gray-900 bg-[#2b2d42] ease-in-out duration-500 block md:hidden overflow-hidden z-[10]"
             : "fixed left-[-100%]"
         }
       >
@@ -173,6 +177,23 @@ const Nav = () => {
           </li>{" "}
         </ul>{" "}
       </div>{" "}
+
+      {/* <div className="flex fixed flex-col top-[35%] left-0">
+        <ul>
+          <li>
+            <a href="#Facebook"><FaFacebookSquare /></a>
+          </li>
+          <li>
+            <a href="#Instagram"><FaInstagram /></a>
+          </li>
+          <li>
+            <a href="#LinkedIn"><FaLinkedin /></a>
+          </li>
+          <li>
+            <a href="#Github"><FaGithub /></a>
+          </li>
+        </ul>
+      </div> */}
     </nav>
   );
 };
