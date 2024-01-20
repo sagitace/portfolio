@@ -38,10 +38,10 @@ const Nav = () => {
         <a
           href="#About"
           onClick={() => handleLinkClick("About")}
-          className="text-[#edf2f4]"
+          className="text-[#edf2f4] tracking-widest"
         >
           {" "}
-          Aaron.{" "}
+          Aaron<span className="text-red-500">.</span>{" "}
         </a>{" "}
       </h1>{" "}
       <ul className="space-x-4 hidden md:flex">
