@@ -34,7 +34,7 @@ const Nav = () => {
   return (
     <nav className="flex justify-between items-center h-19 max-w-[1240px] mx-auto px-4 text-[#edf2f4]">
       {" "}
-      <h1 className="text-xl font-bold">
+      <h1 className="text-xl font-bold animate-fade-down animate-delay-0">
         <a
           href="#About"
           onClick={() => handleLinkClick("About")}
@@ -45,7 +45,7 @@ const Nav = () => {
         </a>{" "}
       </h1>{" "}
       <ul className="space-x-4 hidden md:flex">
-        <li className="p-4">
+        <li className="p-4 animate-fade-down animate-delay-75">
           <a
             href="#Home"
             onClick={() => handleLinkClick("Home")}
@@ -58,7 +58,7 @@ const Nav = () => {
             <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-500" />
           </a>{" "}
         </li>{" "}
-        <li className="p-4">
+        <li className="p-4 animate-fade-down animate-delay-100">
           <a
             href="#About"
             onClick={() => handleLinkClick("About")}
@@ -71,7 +71,7 @@ const Nav = () => {
             <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-500" />
           </a>{" "}
         </li>{" "}
-        <li className="p-4">
+        <li className="p-4 animate-fade-down animate-delay-150">
           <a
             href="#Skills"
             onClick={() => handleLinkClick("Skills")}
@@ -84,7 +84,7 @@ const Nav = () => {
             <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-500" />
           </a>{" "}
         </li>{" "}
-        <li className="p-4">
+        <li className="p-4 animate-fade-down animate-delay-200">
           <a
             href="#Projects"
             onClick={() => handleLinkClick("Projects")}
@@ -97,7 +97,7 @@ const Nav = () => {
             <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-500" />
           </a>{" "}
         </li>{" "}
-        <li className="p-4">
+        <li className="p-4 animate-fade-down animate-delay-300">
           <a
             href="#Contact"
             onClick={() => handleLinkClick("Contact")}
@@ -110,7 +110,7 @@ const Nav = () => {
             <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-500" />
           </a>{" "}
         </li>{" "}
-        <li className="p-4">
+        <li className="p-4 animate-fade-down animate-delay-500">
           <a
             href="#Resume"
             className="bg-transparent hover:bg-red-500 text-[#edf2f4] font-semibold hover:text-[#edf2f4] py-2 px-4 border border-red-500 hover:border-transparent rounded ease-in-out duration-500"
@@ -121,22 +121,34 @@ const Nav = () => {
         </li>{" "}
       </ul>{" "}
       <div className="space-x-4 hidden lg:flex">
-        <a href="#social-media-link-1">
-          {" "}
-          <FaFacebookSquare className="text-blue-600 h-6 w-6" />
-        </a>{" "}
-        <a href="#social-media-link-1">
-          {" "}
-          <FaInstagram className="h-6 w-6 text-red-500" />
-        </a>{" "}
-        <a href="#social-media-link-2">
-          {" "}
-          <FaLinkedin className="h-6 w-6 text-blue-500" />
-        </a>{" "}
-        <a href="#social-media-link-2">
-          {" "}
-          <FaGithub className="h-6 w-6" />
-        </a>{" "}
+        <div className="animate-fade-down animate-delay-700">
+          <a href="#social-media-link-1 ">
+            {" "}
+            <FaFacebookSquare className="text-blue-600 h-6 w-6" />
+          </a>{" "}
+        </div>
+
+        <div className="animate-fade-down animate-delay-[800ms]">
+          <a href="#social-media-link-1">
+            {" "}
+            <FaInstagram className="h-6 w-6 text-red-500" />
+          </a>{" "}
+        </div>
+        
+        <div className="animate-fade-down animate-delay-[900ms]">
+          <a href="#social-media-link-2">
+            {" "}
+            <FaLinkedin className="h-6 w-6 text-blue-500" />
+          </a>{" "}
+        </div>
+
+        <div className="animate-fade-down animate-delay-1000">
+          <a href="#social-media-link-2 ">
+            {" "}
+            <FaGithub className="h-6 w-6" />
+          </a>{" "}
+        </div>
+        
       </div>{" "}
       <div onClick={handleNav} className="block md:hidden z-[50]">
         {" "}

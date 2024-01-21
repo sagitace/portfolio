@@ -26,7 +26,7 @@ const Home = () => {
                 <p className="text-[#8d99ae] py-4 max-w-[700px]">I specialize in building responsive web applications and aims to be an asset to your company.</p>
                 <div>
                     <button className="text-white border-2 border-red-500 px-6 py-3 my-2 flex items-center hover:bg-red-500 hover-border-red-500 rounded ease-in-out duration-500 transform transition-transform hover:scale-105">
-                        Discover More <IoIosArrowDropright  className="ml-3 h-5 w-5 hover:rotate-90 duration-300"/>
+                        Discover More <IoIosArrowDropright  className="ml-3 h-5 w-5 hover:rotate-90 duration-300 "/>
                     </button>
                 </div>
             </div>
