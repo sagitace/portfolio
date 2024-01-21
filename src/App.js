@@ -9,8 +9,10 @@ export default function App() {
       <Nav />
 
       <Home />
-
-      <About />
+      <div id="about" name="about">
+        {" "}
+        <About />{" "}
+      </div>
     </div>
   );
 }

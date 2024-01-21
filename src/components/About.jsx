@@ -2,8 +2,8 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div id="about" className='h-[90vh]'>
-            <h1 className='text-center text-[#edf2f4] font-bold text-4xl mt-3'>
+        <div className='h-[90vh]'>
+            <h1 className='text-center text-[#edf2f4] font-bold text-4xl'>
                 About Me
             </h1>
             <div className='max-w-[1000px] mx-auto px-8 flex-col justify-center grid grid-cols-2 gap-4'>
