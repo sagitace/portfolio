@@ -15,6 +15,10 @@ Accent = #ef233c
 
 */
 
+ScrollLink {
+    cursor: pointer;
+}
+
 .context {
     width: 100%;
     position: absolute;
