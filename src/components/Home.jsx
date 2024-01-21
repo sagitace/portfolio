@@ -1,4 +1,3 @@
-import React, {useState, useEffect} from "react";
 import { IoIosArrowDropright  } from "react-icons/io";
 import { Link as ScrollLink } from 'react-scroll';
 

@@ -17,20 +17,31 @@ const Nav = () => {
   }, []);
 
   const handleNav = () => {
-    setNav(!nav);
+    const newNavState = !nav;
+    setNav(newNavState);
+
+    // Save the new state to localStorage
+    localStorage.setItem('nav', newNavState.toString());
   };
 
+  useEffect(() => {
+    // Retrieve the state from localStorage
+    const storedNav = localStorage.getItem('nav');
+    if (storedNav !== null) {
+      setNav(storedNav === 'true');
+    }
+  }, []);
   return (
     <div className={`sticky top-0 z-10 backdrop-filter ${scrolling ? 'backdrop-blur-md drop-shadow-lg shadow-lg' : '0'} bg-opacity-10  w-full`}>
-      <nav className="flex justify-between items-center h-19 max-w-[1240px] mx-auto px-4 text-[#edf2f4]">
+      <nav className="flex justify-between items-center h-[60px] max-w-[1240px] mx-auto px-4 text-[#edf2f4]">
         <h1 className="text-xl font-bold animate-fade-down animate-delay-0">
           <ScrollLink to="about" smooth={true} duration={1200} onClick={() => setNav(false)} className="navbar-link text-[#edf2f4] tracking-widest cursor-pointer">
             Aaron<span className="text-red-500">.</span>
           </ScrollLink>
         </h1>
         <ul className="space-x-4 hidden md:flex">
-          {["home", "about", "skills", "projects", "contact"].map((section) => (
-            <li key={section} className="nav-item p-4 animate-fade-down animate-delay-75">
+          {["home", "about", "skills", "projects", "contact"].map((section, index) => (
+            <li key={section} className={`nav-item p-4 animate-fade-down`}>
               <ScrollLink
                 to={section}
                 spy={true}
@@ -45,7 +56,7 @@ const Nav = () => {
               </ScrollLink>
             </li>
           ))}
-          <li className="nav-item p-4 animate-fade-down animate-delay-500">
+          <li className="nav-item p-4 animate-fade-down">
             <a
               href="#Resume"
               className="bg-transparent hover:bg-red-500 text-[#edf2f4] font-semibold hover:text-[#edf2f4] py-2 px-4 border border-red-500 hover:border-transparent rounded ease-in-out duration-500"
@@ -61,7 +72,7 @@ const Nav = () => {
             { link: "https://www.linkedin.com/in/aaron-labini-101164241/", icon: <FaLinkedin className="h-6 w-6 text-blue-500" /> },
             { link: "https://github.com/sagitace", icon: <FaGithub className="h-6 w-6" /> },
           ].map((social, index) => (
-            <div key={index} className={`animate-fade-down animate-delay-${500 + index * 100}`}>
+            <div key={index} className={`animate-fade-down`}>
               <a href={social.link} target="_blank" rel="noopener noreferrer">
                 {social.icon}
               </a>
@@ -72,7 +83,7 @@ const Nav = () => {
           {!nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
         </div>
         <div className={`fixed left-0 top-0 w-[100%] h-full border-r-gray-900 bg-[#2b2d42] ease-in-out duration-500 block md:hidden overflow-hidden z-[10] ${!nav ? '' : 'left-[-100%]'}`}>
-          <h1 className="text-xl font-bold w-full m-6"> Aaron. </h1>
+          <h1 className="text-xl font-bold w-full m-6 "> Aaron. </h1>
           <ul className="uppercase p-4">
             {["home", "about", "skills", "projects", "contact"].map((section) => (
               <li key={section} className="p-4 border-b border-gray-600">
