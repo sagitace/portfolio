@@ -18,8 +18,7 @@ const Projects = () => {
            </header>
            <div className="grid grid-cols-0 md:grid-cols-1 lg:grid-cols-2 gap-x-10 md:gap-y-4 w-full mb-24">
 
-           <div className="overflow-hidden shadow-lg rounded-lg h-96 w-72 mb-6 sm:w-80 md:w-[500px] cursor-pointer m-auto drop-shadow-xl shadow-stone-500" style={divStyle}>
-                    <a href="#as" className="w-full block h-full">
+           <div className="overflow-hidden shadow-lg rounded-lg h-96 w-72 mb-6 sm:w-80 md:w-[500px] m-auto drop-shadow-xl shadow-stone-500" style={divStyle}>
                         <div className="relative w-full flex flex-col justify-between  h-full">
                             <div className="absolute inset-x-0 bottom-4 left-4 right-4">
                                 <p className="text-white text-3xl font-medium">
@@ -53,11 +52,10 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    
                 </div>
 
-                <div className="overflow-hidden shadow-lg rounded-lg h-96 w-72 mb-6 sm:w-80 md:w-[500px] cursor-pointer m-auto drop-shadow-xl shadow-stone-500" style={divStyle}>
-                    <a href="#as" className="w-full block h-full">
+                <div className="overflow-hidden shadow-lg rounded-lg h-96 w-72 mb-6 sm:w-80 md:w-[500px]  m-auto drop-shadow-xl shadow-stone-500" style={divStyle}>
                         <div className="relative w-full flex flex-col justify-between  h-full">
                             <div className="absolute inset-x-0 bottom-4 left-4 right-4">
                                 <p className="text-white text-3xl font-medium">
@@ -88,13 +86,9 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
                 </div>
 
-
-
-                <div className="overflow-hidden shadow-lg rounded-lg h-96 w-72 mb-6 sm:w-80 md:w-[500px] cursor-pointer m-auto drop-shadow-xl shadow-stone-500" style={divStyle}>
-                    <a href="#as" className="w-full block h-full">
+                <div className="overflow-hidden shadow-lg rounded-lg h-96 w-72 mb-6 sm:w-80 md:w-[500px] m-auto drop-shadow-xl shadow-stone-500" style={divStyle}>
                         <div className="relative w-full flex flex-col justify-between  h-full">
                             <div className="absolute inset-x-0 bottom-4 left-4 right-4">
                                 <p className="text-white text-3xl font-medium">
@@ -125,11 +119,9 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
                 </div>
 
-                <div className="overflow-hidden shadow-lg rounded-lg h-96 w-72 mb-6 sm:w-80 md:w-[500px] cursor-pointer m-auto drop-shadow-xl shadow-stone-500" style={divStyle}>
-                    <a href="#as" className="w-full block h-full">
+                <div className="overflow-hidden shadow-lg rounded-lg h-96 w-72 mb-6 sm:w-80 md:w-[500px] m-auto drop-shadow-xl shadow-stone-500" style={divStyle}>
                         <div className="relative w-full flex flex-col justify-between  h-full">
                             <div className="absolute inset-x-0 bottom-4 left-4 right-4">
                                 <p className="text-white text-3xl font-medium">
@@ -160,9 +152,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
                 </div>
-
 
            </div>
         </div>
