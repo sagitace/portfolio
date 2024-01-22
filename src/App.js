@@ -12,7 +12,7 @@ export default function App() {
       <div id="about" name="about">
         {" "}
         <About />{" "}
-      </div>
+      </div>{" "}
       <div id="skills" name="skills">
         {" "}
         <Skills />{" "}
