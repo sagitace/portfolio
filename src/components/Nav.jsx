@@ -3,7 +3,19 @@ import { FaGithub, FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link as ScrollLink } from 'react-scroll';
 
+
 const Nav = () => {
+  
+  // Download my resume
+  const onButtonClick = () => {
+    const pdfUrl = process.env.PUBLIC_URL + "/Resume.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Aaron Labini Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   const [nav, setNav] = useState(false);
   const [scrolling, setScrolling] = useState(false);
 
@@ -31,6 +43,7 @@ const Nav = () => {
       setNav(storedNav === 'true');
     }
   }, []);
+
   return (
     <div className={`sticky top-0 z-10 backdrop-filter ${scrolling ? 'backdrop-blur-md drop-shadow-lg shadow-lg' : '0'} bg-opacity-10  w-full`}>
       <nav className="flex justify-between items-center h-[60px] max-w-[1240px] mx-auto px-4 text-[#edf2f4]">
@@ -57,12 +70,12 @@ const Nav = () => {
             </li>
           ))}
           <li className="nav-item p-4 animate-fade-down">
-            <a
-              href="#Resume"
-              className="bg-transparent hover:bg-red-500 text-[#edf2f4] font-semibold hover:text-[#edf2f4] py-2 px-4 border border-red-500 hover:border-transparent rounded ease-in-out duration-500"
-            >
-              Resume
-            </a>
+          <button
+                onClick={onButtonClick}
+                className="bg-transparent hover:bg-red-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+              >
+                Resume
+              </button>
           </li>
         </ul>
         <div className="space-x-4 hidden lg:flex">
@@ -93,12 +106,12 @@ const Nav = () => {
               </li>
             ))}
             <li className="p-4">
-              <a
-                href="#Resume"
+              <button
+                onClick={onButtonClick}
                 className="bg-transparent hover:bg-red-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
               >
                 Resume
-              </a>
+              </button>
             </li>
           </ul>
         </div>

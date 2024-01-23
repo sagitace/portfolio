@@ -46,7 +46,7 @@ const Projects = () => {
                                 <div className="animate-delay-200 animate-ease-in-out mt-4">
                                         <a href="#wala pa"
                                             className="btn text-white pointer-events-auto border-2 border-red-500 px-6 py-2 flex items-center hover:bg-red-500 hover-border-red-500 rounded z-1000 cursor-pointer w-auto tracking-widest" 
-                                            >  <FaGithub className="h-6 w-6 text-white"/>
+                                            > <FaGithub className="h-6 w-6 text-white"/>
                                         </a>
                                     </div>
                                 </div>
@@ -135,10 +135,10 @@ const Projects = () => {
                                         HTML 5
                                     </span>
                                     <span className="m-1 px-2 py-1 rounded bg-red-500">
-                                        Tailwind CSS
+                                        Bootstrap
                                     </span>
                                     <span className="m-1 px-2 py-1 rounded bg-red-500">
-                                        React
+                                        Laravel
                                     </span>
                                 </div>
                             
