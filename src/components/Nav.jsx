@@ -7,7 +7,7 @@ import { Link as ScrollLink } from 'react-scroll';
 const Nav = () => {
   
   // Download my resume
-  const onButtonClick = () => {
+  const downloadResume = () => {
     const pdfUrl = process.env.PUBLIC_URL + "/Resume.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
@@ -70,12 +70,16 @@ const Nav = () => {
             </li>
           ))}
           <li className="nav-item p-4 animate-fade-down">
-          <button
-                onClick={onButtonClick}
+            <a
+                href="#download"
+                onClick={(e) => {
+                    e.preventDefault();
+                    downloadResume();
+                }}
                 className="bg-transparent hover:bg-red-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
-              >
+            >
                 Resume
-              </button>
+            </a>
           </li>
         </ul>
         <div className="space-x-4 hidden lg:flex">
@@ -106,12 +110,16 @@ const Nav = () => {
               </li>
             ))}
             <li className="p-4">
-              <button
-                onClick={onButtonClick}
-                className="bg-transparent hover:bg-red-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+              <a
+                  href="#download"
+                  onClick={(e) => {
+                      e.preventDefault();
+                      downloadResume();
+                  }}
+                  className="bg-transparent hover:bg-red-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
               >
-                Resume
-              </button>
+                  Resume
+              </a>
             </li>
           </ul>
         </div>
