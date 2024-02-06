@@ -9,8 +9,8 @@ const Projects = () => {
         </h1>
       </header>
       <div className="grid grid-cols-0 md:grid-cols-1 lg:grid-cols-2 gap-x-10 md:gap-y-4 w-full mb-24">
-        <div className="overflow-hidden shadow-lg rounded-lg h-[400px] w-[325px] mb-6 sm:w-96 md:w-[550px] m-auto drop-shadow-xl shadow-stone-500 bg-[url('../public/assets/project1-bg.png')] bg-cover hover:bg-scale-125">
-          <div className="relative w-full flex flex-col justify-between  h-full">
+        <div className="overflow-hidden shadow-lg rounded-lg h-[400px] w-[325px] mb-6 sm:w-96 md:w-[550px] m-auto drop-shadow-xl shadow-stone-500 bg-[url('../public/assets/project1-bg.png')] bg-cover hover:bg-scale-125 relative">
+          <div className="w-full flex flex-col justify-between h-full">
             <div className="absolute inset-x-0 bottom-4 left-4 right-4">
               <p className="text-white text-3xl font-medium">
                 Portfolio Website Version 1.0
@@ -53,6 +53,9 @@ const Projects = () => {
                 </div>
               </div>
             </div>
+
+            {/* Black overlay with 50% opacity to make the description pop out */}
+            <div className="absolute inset-0 bg-black opacity-50 rounded-lg z-[-10]"></div>
           </div>
         </div>
 
@@ -96,11 +99,16 @@ const Projects = () => {
                 </div>
               </div>
             </div>
+            {/* Black overlay with 50% opacity to make the description pop out */}
+            <div className="absolute inset-0 bg-black opacity-50 rounded-lg z-[-10]"></div>
           </div>
         </div>
 
-        <div className="overflow-hidden shadow-lg rounded-lg h-[400px] w-[325px] mb-6 sm:w-96 md:w-[550px] m-auto drop-shadow-xl shadow-stone-500">
+        <div className="overflow-hidden shadow-lg rounded-lg h-[400px] w-[325px] mb-6 sm:w-96 md:w-[550px] m-auto drop-shadow-xl shadow-stone-500 relative">
           <div className="relative w-full flex flex-col justify-between h-full bg-[url('../public/assets/tapbox-bg.png')] bg-cover">
+            {/* Add the black overlay with 50% opacity */}
+            <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+
             <div className="absolute inset-x-0 bottom-4 left-4 right-4">
               <p className="text-white text-3xl font-medium">Tapbox</p>
               <p className="text-white font-normal text-md">
@@ -135,6 +143,8 @@ const Projects = () => {
 
         <div className="overflow-hidden shadow-lg rounded-lg h-[400px] w-[325px] mb-6 sm:w-96 md:w-[550px] m-auto drop-shadow-xl shadow-stone-500">
           <div className="relative w-full flex flex-col justify-between h-full bg-[url('../public/assets/project3-bg.png')] bg-cover">
+            {/* Add the black overlay with 50% opacity */}
+            <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
             <div className="absolute inset-x-0 bottom-4 left-4 right-4">
               <p className="text-white text-3xl font-medium">
                 eBicol University Provident Fund
@@ -169,6 +179,8 @@ const Projects = () => {
                 </div>
               </div>
             </div>
+            {/* Black overlay with 50% opacity to make the description pop out */}
+            <div className="absolute inset-0 bg-black opacity-50 rounded-lg z-[-10]"></div>
           </div>
         </div>
       </div>
