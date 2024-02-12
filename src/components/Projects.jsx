@@ -129,7 +129,9 @@ const Projects = () => {
               <div className="flex items-center mt-2">
                 <div className="animate-delay-200 animate-ease-in-out mt-4">
                   <a
-                    href="#wala pa"
+                    href="https://github.com/sagitace/tapbox-new-v"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn text-white pointer-events-auto border-2 border-red-500 px-6 py-2 flex items-center hover:bg-red-500 hover-border-red-500 rounded z-1000 cursor-pointer w-auto tracking-widest font-bold"
                   >
                     {" "}
@@ -170,7 +172,9 @@ const Projects = () => {
               <div className="flex items-center mt-2">
                 <div className="animate-delay-200 animate-ease-in-out mt-4">
                   <a
-                    href="#wala pa"
+                    href="https://github.com/sagitace/eBUPF"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn text-white pointer-events-auto border-2 border-red-500 px-6 py-2 flex items-center hover:bg-red-500 hover-border-red-500 rounded z-1000 cursor-pointer w-auto tracking-widest font-bold"
                   >
                     {" "}
