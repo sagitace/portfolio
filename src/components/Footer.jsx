@@ -1,14 +1,18 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-
+import Slide from "react-reveal/Slide";
 const Footer = () => {
   return (
     <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-      <header class="flex flex-wrap justify-center -mx-5 -my-2">
-        <div className="text-gray-400">
-          <p>Built with React and Tailwind CSS</p>
+      <Slide up>
+        <div>
+          <header class="flex flex-wrap justify-center -mx-5 -my-2">
+            <div className="text-gray-400">
+              <p>Built with React and Tailwind CSS</p>
+            </div>
+          </header>
         </div>
-      </header>
+      </Slide>
       <div class="flex justify-center mt-8 space-x-6">
         {[
           /*  { link: "https://www.facebook.com/aaronSagittaire/", icon: <FaFacebookSquare className="text-blue-600 h-6 w-6" /> },*/
@@ -25,16 +29,22 @@ const Footer = () => {
             icon: <FaGithub className="h-6 w-6 text-white" />,
           },
         ].map((social, index) => (
-          <div key={index} className={`animate-fade-down`}>
-            <a href={social.link} target="_blank" rel="noopener noreferrer">
-              {social.icon}
-            </a>
-          </div>
+          <Slide up duration={1000 * (index + 1)}>
+            <div key={index}>
+              <a href={social.link} target="_blank" rel="noopener noreferrer">
+                {social.icon}
+              </a>
+            </div>
+          </Slide>
         ))}
       </div>
-      <p class="mt-8 text-base leading-6 text-center text-gray-400">
-        Copyright © 2024 Aaron Labini All Rights Reserved.
-      </p>
+      <Slide up duration={3000}>
+        <div>
+          <p class="mt-8 text-base leading-6 text-center text-gray-400">
+            Copyright © 2024 Aaron Labini All Rights Reserved.
+          </p>
+        </div>
+      </Slide>
     </div>
   );
 };
