@@ -31,9 +31,9 @@ const Projects = () => {
                   Figma 101 Part 1 - Introductory Workshop on UX Design
                 </a>
                 <p class="text-[#d5d7d8] text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                  exercitationem praesentium nihil.
+                  A 2-hour workshop on UX Design of the DICT Region V -
+                  Camarines Sur through the ILCDB as part of the Tech4ED DTC
+                  Initiative - TechTalks, via Zoom Platform and FB Live.
                 </p>
               </div>
               <div class="flex items-center">
@@ -44,16 +44,14 @@ const Projects = () => {
                 />
 
                 <div class="text-sm ">
-                  <p class="text-[#edf2f4] font-semibold leading-none hover:text-indigo-600">
-                    DICT
-                  </p>
+                  <p class="text-[#edf2f4] font-semibold leading-none ">DICT</p>
                   <p class="text-[#edf2f4]">March 14, 2024</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class=" bg-gray-800 flex flex-col justify-between leading-normal rounded-lg">
+          <div class=" bg-gray-800 flex flex-col justify-between leading-normal rounded-lg drop-shadow-xl shadow-white">
             <img
               src={process.env.PUBLIC_URL + "/assets/cert2.png"}
               class="w-full mb-3 rounded-t-lg"
@@ -70,12 +68,12 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   class="text-[#edf2f4] font-bold text-lg mb-2 inline-block"
                 >
-                  Figma 101 Part 1 - Introductory Workshop on UX Design
+                  Figma 101 Part 2 - Introductory Workshop on UX Design
                 </a>
                 <p class="text-[#d5d7d8] text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                  exercitationem praesentium nihil.
+                  A 2-hour workshop on UX Design of the DICT Region V -
+                  Camarines Sur through the ILCDB as part of the Tech4ED DTC
+                  Initiative - TechTalks, via Zoom Platform and FB Live.
                 </p>
               </div>
               <div class="flex items-center">
@@ -86,16 +84,14 @@ const Projects = () => {
                 />
 
                 <div class="text-sm ">
-                  <p class="text-[#edf2f4] font-semibold leading-none hover:text-indigo-600">
-                    DICT
-                  </p>
+                  <p class="text-[#edf2f4] font-semibold leading-none ">DICT</p>
                   <p class="text-[#edf2f4]">March 21, 2024</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class=" bg-gray-800 flex flex-col justify-between leading-normal rounded-lg ">
+          <div class=" bg-gray-800 flex flex-col justify-between leading-normal rounded-lg drop-shadow-xl shadow-white">
             <img
               src={process.env.PUBLIC_URL + "/assets/cert3.png"}
               class="w-full mb-3 rounded-t-lg"
@@ -112,12 +108,13 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   class="text-[#edf2f4] font-bold text-lg mb-2 inline-block"
                 >
-                  Figma 101 Part 1 - Introductory Workshop on UX Design
+                  Canva Edition - Mastering Digital Commerce
                 </a>
                 <p class="text-[#d5d7d8] text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                  exercitationem praesentium nihil.
+                  A webinar for unleashing the power to sell products online
+                  with creative finesse of the DICT Region V - Albay through the
+                  ILCDB as part of the Tech4ED DTC Initiative - TechTalks, via
+                  Zoom Platform and FB Live.
                 </p>
               </div>
               <div class="flex items-center">
@@ -128,9 +125,7 @@ const Projects = () => {
                 />
 
                 <div class="text-sm ">
-                  <p class="text-[#edf2f4] font-semibold leading-none hover:text-indigo-600">
-                    DICT
-                  </p>
+                  <p class="text-[#edf2f4] font-semibold leading-none ">DICT</p>
                   <p class="text-[#edf2f4]">March 25, 2024</p>
                 </div>
               </div>

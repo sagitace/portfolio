@@ -71,8 +71,8 @@ export default function App() {
             <Projects />{" "}
           </div>{" "}
           <div
-            id="projects"
-            name="projects"
+            id="certificates"
+            name="certificates"
             className="text-white  flex justify-between items-center mx-auto px-6 md:px-6 lg:px-6 w-full"
           >
             {" "}

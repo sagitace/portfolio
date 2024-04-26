@@ -61,24 +61,29 @@ const Nav = () => {
           </ScrollLink>
         </h1>
         <ul className="space-x-4 hidden md:flex">
-          {["home", "about", "skills", "projects", "contact"].map(
-            (section, index) => (
-              <li key={section} className={`nav-item p-4 animate-fade-down`}>
-                <ScrollLink
-                  to={section}
-                  spy={true}
-                  smooth={true}
-                  offset={-90}
-                  duration={1000}
-                  onClick={() => setNav(false)}
-                  className="navbar-link tracking-widest relative group cursor-pointer text-[#edf2f4]"
-                >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
-                  <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-500" />
-                </ScrollLink>
-              </li>
-            )
-          )}
+          {[
+            "home",
+            "about",
+            "skills",
+            "projects",
+            "certificates",
+            "contact",
+          ].map((section, index) => (
+            <li key={section} className={`nav-item p-4 animate-fade-down`}>
+              <ScrollLink
+                to={section}
+                spy={true}
+                smooth={true}
+                offset={-90}
+                duration={1000}
+                onClick={() => setNav(false)}
+                className="navbar-link tracking-widest relative group cursor-pointer text-[#edf2f4]"
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+                <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-500" />
+              </ScrollLink>
+            </li>
+          ))}
           <li className="nav-item p-4 animate-fade-down">
             <a
               /*  href="#download"
@@ -128,15 +133,20 @@ const Nav = () => {
         >
           <h1 className="text-xl font-bold w-full m-6 "> Aaron. </h1>
           <ul className="uppercase p-4">
-            {["home", "about", "skills", "projects", "contact"].map(
-              (section) => (
-                <li key={section} className="p-4 border-b border-gray-600">
-                  <a href={`#${section}`} onClick={() => setNav(false)}>
-                    {section.charAt(0).toUpperCase() + section.slice(1)}
-                  </a>
-                </li>
-              )
-            )}
+            {[
+              "home",
+              "about",
+              "skills",
+              "projects",
+              "certificates",
+              "contact",
+            ].map((section) => (
+              <li key={section} className="p-4 border-b border-gray-600">
+                <a href={`#${section}`} onClick={() => setNav(false)}>
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </a>
+              </li>
+            ))}
             <li className="p-4">
               <a
                 href="#download"
