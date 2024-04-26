@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -11,8 +11,11 @@ const Footer = () => {
       </header>
       <div class="flex justify-center mt-8 space-x-6">
         {[
-          /*  { link: "https://www.facebook.com/aaronSagittaire/", icon: <FaFacebookSquare className="text-blue-600 h-6 w-6" /> },
-            { link: "https://www.instagram.com/sagitace/", icon: <FaInstagram className="h-6 w-6 text-red-500" /> }, */
+          /*  { link: "https://www.facebook.com/aaronSagittaire/", icon: <FaFacebookSquare className="text-blue-600 h-6 w-6" /> },*/
+          {
+            link: "https://www.instagram.com/sagitace/",
+            icon: <FaInstagram className="h-6 w-6 text-red-500" />,
+          },
           {
             link: "https://www.linkedin.com/in/aaron-labini-101164241/",
             icon: <FaLinkedin className="h-6 w-6 text-blue-500" />,

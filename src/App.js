@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Certificates from "./components/Certificates";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import RingLoader from "react-spinners/RingLoader";
@@ -68,6 +69,14 @@ export default function App() {
           >
             {" "}
             <Projects />{" "}
+          </div>{" "}
+          <div
+            id="projects"
+            name="projects"
+            className="text-white  flex justify-between items-center mx-auto px-6 md:px-6 lg:px-6 w-full"
+          >
+            {" "}
+            <Certificates />{" "}
           </div>{" "}
           <div id="contact" name="contact" className="h-[70vh] mb-20 md:mb-0">
             <Contact />

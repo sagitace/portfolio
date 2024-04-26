@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -81,11 +81,14 @@ const Nav = () => {
           )}
           <li className="nav-item p-4 animate-fade-down">
             <a
-              href="#download"
+              /*  href="#download"
               onClick={(e) => {
                 e.preventDefault();
                 downloadResume();
-              }}
+              }} */
+              href="https://green-doloritas-62.tiiny.site/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-transparent hover:bg-red-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
             >
               Resume
@@ -95,10 +98,10 @@ const Nav = () => {
         <div className="space-x-4 hidden lg:flex">
           {[
             /* { link: "https://www.facebook.com/aaronSagittaire/", icon: <FaFacebookSquare className="text-blue-600 h-6 w-6" /> }, */
-            /*  {
+            {
               link: "https://www.instagram.com/sagitace/",
               icon: <FaInstagram className="h-6 w-6 text-red-500" />,
-            }, */
+            },
             {
               link: "https://www.linkedin.com/in/aaron-labini-101164241/",
               icon: <FaLinkedin className="h-6 w-6 text-blue-600" />,
