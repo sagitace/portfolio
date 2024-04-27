@@ -5,7 +5,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Nav = () => {
   // Download my resume
-  const downloadResume = () => {
+  /*  const downloadResume = () => {
     const pdfUrl = process.env.PUBLIC_URL + "/Resume.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
@@ -13,8 +13,8 @@ const Nav = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  };
-  const [nav, setNav] = useState(false);
+  }; 
+  const [nav, setNav] = useState(false); */
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
@@ -26,21 +26,22 @@ const Nav = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNav = () => {
+  /* const handleNav = () => {
     const newNavState = !nav;
     setNav(newNavState);
 
     // Save the new state to localStorage
     localStorage.setItem("nav", newNavState.toString());
-  };
+  }; */
 
-  useEffect(() => {
+  /* useEffect(() => {
     // Retrieve the state from localStorage
     const storedNav = localStorage.getItem("nav");
     if (storedNav !== null) {
       setNav(storedNav === "true");
     }
-  }, []);
+  }, []); */
+  const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
   return (
     <div
@@ -54,13 +55,14 @@ const Nav = () => {
             to="about"
             smooth={true}
             duration={1200}
-            onClick={() => setNav(false)}
+            onClick={() => setIsNavOpen(false)}
             className="navbar-link text-[#edf2f4] tracking-widest cursor-pointer"
           >
             Aaron<span className="text-red-500">.</span>
           </ScrollLink>
         </h1>
-        <ul className="space-x-4 hidden md:flex">
+
+        <ul className="DESKTOP-MENU space-x-4 hidden lg:flex">
           {[
             "home",
             "about",
@@ -76,7 +78,7 @@ const Nav = () => {
                 smooth={true}
                 offset={-90}
                 duration={1000}
-                onClick={() => setNav(false)}
+                onClick={() => setIsNavOpen(false)}
                 className="navbar-link tracking-widest relative group cursor-pointer text-[#edf2f4]"
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -100,7 +102,7 @@ const Nav = () => {
             </a>
           </li>
         </ul>
-        <div className="space-x-4 hidden lg:flex">
+        <div className="DESKTOP-MENU space-x-4 hidden lg:flex">
           {[
             /* { link: "https://www.facebook.com/aaronSagittaire/", icon: <FaFacebookSquare className="text-blue-600 h-6 w-6" /> }, */
             {
@@ -123,7 +125,73 @@ const Nav = () => {
             </div>
           ))}
         </div>
-        <div onClick={handleNav} className="block md:hidden z-[50]">
+
+        <section className="MOBILE-MENU flex lg:hidden">
+          <div
+            className="HAMBURGER-ICON space-y-2 z-[50]"
+            onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
+          >
+            {isNavOpen ? (
+              <AiOutlineMenu size={24} />
+            ) : (
+              <AiOutlineClose size={24} />
+            )}
+          </div>
+
+          <div className={isNavOpen ? "showMenuNav z-[50]" : "hideMenuNav"}>
+            <div
+              className={`fixed left-0 top-0 w-[100%] h-[80%] border-r-gray-900 bg-[#2b2d42] ease-in-out duration-500 block lg:hidden overflow-hidden ${
+                !isNavOpen ? "" : "left-[-100%]"
+              }`}
+            >
+              <h1 className="text-xl font-bold w-full m-6 "> Aaron. </h1>
+              <ul className="uppercase p-4">
+                {[
+                  "home",
+                  "about",
+                  "skills",
+                  "projects",
+                  "certificates",
+                  "contact",
+                ].map((section, index) => (
+                  <li
+                    key={section}
+                    className={`nav-item p-4 animate-fade-down`}
+                  >
+                    <ScrollLink
+                      to={section}
+                      spy={true}
+                      smooth={true}
+                      offset={-90}
+                      duration={1000}
+                      onClick={() => setIsNavOpen(false)}
+                      className="navbar-link tracking-widest relative group cursor-pointer text-[#edf2f4]"
+                    >
+                      {section.charAt(0).toUpperCase() + section.slice(1)}
+                      <div className="absolute w-full h-0.5 bg-red-400 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-500" />
+                    </ScrollLink>
+                  </li>
+                ))}
+                <li className="nav-item p-4 animate-fade-down">
+                  <a
+                    /*  href="#download"
+              onClick={(e) => {
+                e.preventDefault();
+                downloadResume();
+              }} */
+                    href="https://green-doloritas-62.tiiny.site/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-transparent hover:bg-red-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+                  >
+                    Resume
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        {/*   <div onClick={handleNav} className="block md:hidden z-[50]">
           {!nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
         </div>
         <div
@@ -160,7 +228,7 @@ const Nav = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </nav>
     </div>
   );
