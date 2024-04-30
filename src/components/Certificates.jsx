@@ -17,8 +17,51 @@ const Projects = () => {
             <div>
               <div class="bg-gray-800 flex flex-col justify-between leading-normal rounded-lg drop-shadow-xl shadow-white">
                 <img
+                  src={process.env.PUBLIC_URL + "/assets/cert4.jpg"}
+                  class="w-full mb-3 rounded-t-lg h-60"
+                  alt="Certificate"
+                />
+                <div class="p-4 pt-2">
+                  <div class="mb-8">
+                    <a
+                      href={process.env.PUBLIC_URL + "/assets/cert4.jpg"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-[#edf2f4] font-bold text-lg mb-2 inline-block"
+                    >
+                      A Patent Searching and Drafting Training
+                    </a>
+                    <p class="text-[#d5d7d8] text-sm">
+                      A 3-day training that aims to capacitate Bicol University
+                      Student on Patent Searching and Drafting. Also aims to
+                      protect students' intellectual property though IP
+                      assignments and applications.
+                    </p>
+                  </div>
+                  <div class="flex items-center">
+                    <img
+                      class="w-10 h-10 rounded-full mr-4"
+                      src={process.env.PUBLIC_URL + "/assets/BU-logo.png"}
+                      alt="DICT Logo"
+                    />
+
+                    <div class="text-sm ">
+                      <p class="text-[#edf2f4] font-semibold leading-none ">
+                        Bicol University
+                      </p>
+                      <p class="text-[#edf2f4]">November 28-30, 2023</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Slide>
+          <Slide up>
+            <div>
+              <div class="bg-gray-800 flex flex-col justify-between leading-normal rounded-lg drop-shadow-xl shadow-white">
+                <img
                   src={process.env.PUBLIC_URL + "/assets/cert1.png"}
-                  class="w-full mb-3 rounded-t-lg"
+                  class="w-full mb-3 rounded-t-lg h-60"
                   alt="Certificate"
                 />
                 <div class="p-4 pt-2">
@@ -63,7 +106,7 @@ const Projects = () => {
               <div class=" bg-gray-800 flex flex-col justify-between leading-normal rounded-lg drop-shadow-xl shadow-white">
                 <img
                   src={process.env.PUBLIC_URL + "/assets/cert2.png"}
-                  class="w-full mb-3 rounded-t-lg"
+                  class="w-full mb-3 rounded-t-lg h-60"
                   alt="Certificate"
                 />
                 <div class="p-4 pt-2">
@@ -109,7 +152,7 @@ const Projects = () => {
               <div class=" bg-gray-800 flex flex-col justify-between leading-normal rounded-lg drop-shadow-xl shadow-white">
                 <img
                   src={process.env.PUBLIC_URL + "/assets/cert3.png"}
-                  class="w-full mb-3 rounded-t-lg"
+                  class="w-full mb-3 rounded-t-lg h-60"
                   alt="Certificate"
                 />
                 <div class="p-4 pt-2">
@@ -144,6 +187,51 @@ const Projects = () => {
                         DICT
                       </p>
                       <p class="text-[#edf2f4]">March 25, 2024</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Slide>
+          <Slide up>
+            <div>
+              <div class=" bg-gray-800 flex flex-col justify-between leading-normal rounded-lg drop-shadow-xl shadow-white">
+                <img
+                  src={process.env.PUBLIC_URL + "/assets/cert5.png"}
+                  class="w-full mb-3 rounded-t-lg h-60"
+                  alt="Certificate"
+                />
+                <div class="p-4 pt-2">
+                  <div class="mb-8">
+                    <a
+                      href={
+                        process.env.PUBLIC_URL + "/assets/certificates/gict.pdf"
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-[#edf2f4] font-bold text-lg mb-2 inline-block"
+                    >
+                      Participant in International Girls in ICT Day 2024
+                    </a>
+                    <p class="text-[#d5d7d8] text-sm">
+                      Participated in this event organized by the International
+                      Telecommunication Union (ITU) and DICT. Gained more
+                      knowledge about tech industries and what opportunities are
+                      ahead of us.
+                    </p>
+                  </div>
+                  <div class="flex items-center">
+                    <img
+                      class="w-10 h-10 rounded-full mr-4"
+                      src={process.env.PUBLIC_URL + "/assets/dict.png"}
+                      alt="DICT Logo"
+                    />
+
+                    <div class="text-sm ">
+                      <p class="text-[#edf2f4] font-semibold leading-none ">
+                        DICT
+                      </p>
+                      <p class="text-[#edf2f4]">April 25, 2024</p>
                     </div>
                   </div>
                 </div>
