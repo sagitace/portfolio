@@ -2,7 +2,6 @@ import React from "react";
 import { SiMinutemailer } from "react-icons/si";
 import { BsFillSendFill } from "react-icons/bs";
 import Slide from "react-reveal/Slide";
-import Bounce from "react-reveal/Bounce";
 const Contact = () => {
   return (
     <div className="mx-auto">
@@ -102,17 +101,15 @@ const Contact = () => {
                 </div>
                 <div className="animate-fade-up animate-once animate-delay-[600ms] animate-ease-in-out flex justify-center items-center my-3 sm:my-2 md:my-0">
                   <div className="animate-delay-200 animate-ease-in-out mt-4">
-                    <Bounce up>
-                      <a
-                        to="about"
-                        href="mailto:aaronbarlas.labini@gmail.com"
-                        className="btn text-white pointer-events-auto border-2 border-red-500 px-6 py-3 my-2 flex items-center hover:bg-red-500 hover-border-red-500 rounded z-1000 cursor-pointer w-[200px] tracking-widest"
-                      >
-                        {" "}
-                        <SiMinutemailer className="h-6 w-6 mr-2 animate-jump animate-infinite animate-duration-[3000ms]" />{" "}
-                        CONTACT ME
-                      </a>
-                    </Bounce>
+                    <a
+                      to="about"
+                      href="mailto:aaronbarlas.labini@gmail.com"
+                      className="btn text-white pointer-events-auto border-2 border-red-500 px-6 py-3 my-2 flex items-center hover:bg-red-500 hover-border-red-500 rounded z-1000 cursor-pointer w-[200px] tracking-widest"
+                    >
+                      {" "}
+                      <SiMinutemailer className="h-6 w-6 mr-2 animate-jump animate-infinite animate-duration-[3000ms]" />{" "}
+                      CONTACT ME
+                    </a>
                   </div>
                 </div>
               </div>

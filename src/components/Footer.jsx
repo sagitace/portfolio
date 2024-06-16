@@ -29,7 +29,7 @@ const Footer = () => {
             icon: <FaGithub className="h-6 w-6 text-white" />,
           },
         ].map((social, index) => (
-          <Slide up duration={1000 * (index + 1)}>
+          <Slide up>
             <div key={index}>
               <a href={social.link} target="_blank" rel="noopener noreferrer">
                 {social.icon}
@@ -38,7 +38,7 @@ const Footer = () => {
           </Slide>
         ))}
       </div>
-      <Slide up duration={3000}>
+      <Slide up>
         <div>
           <p class="mt-8 text-base leading-6 text-center text-gray-400">
             Copyright © 2024 Aaron Labini All Rights Reserved.
