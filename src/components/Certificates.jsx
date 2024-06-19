@@ -1,7 +1,12 @@
 import React from "react";
 import Slide from "react-reveal/Slide";
+import { useState } from "react";
+import { TfiMoreAlt } from "react-icons/tfi";
 
 const Projects = () => {
+  //click to display the other certificates
+  const [showCertificates, setShowCertificates] = useState(false);
+
   return (
     <div className="mx-auto">
       <Slide up>
@@ -290,7 +295,7 @@ const Projects = () => {
           </Slide>
 
           <Slide up>
-            <div>
+            <div className={` ${!showCertificates ? "hidden" : "block"}`}>
               <div class="bg-gray-800 flex flex-col justify-between leading-normal rounded-lg drop-shadow-xl shadow-white">
                 <img
                   src={process.env.PUBLIC_URL + "/assets/cert1.png"}
@@ -336,7 +341,7 @@ const Projects = () => {
           </Slide>
 
           <Slide up>
-            <div>
+            <div className={` ${!showCertificates ? "hidden" : "block"}`}>
               <div class="bg-gray-800 flex flex-col justify-between leading-normal rounded-lg drop-shadow-xl shadow-white">
                 <img
                   src={process.env.PUBLIC_URL + "/assets/cert4.jpg"}
@@ -378,6 +383,16 @@ const Projects = () => {
               </div>
             </div>
           </Slide>
+          <div className=" col-span-1 md:col-span-3 sm:col-span-2 flex justify-center max-md:mb-10 max-md:-mt-2">
+            <button
+              className={`${
+                showCertificates && "hidden"
+              }  btn text-white border-2 border-red-500 px-6 py-2 hover:bg-red-500 hover-border-red-500 rounded cursor-pointer max-w-[20%] min-w-[190px] flex justify-center items-center md:text-xl text-lg`}
+              onClick={() => setShowCertificates(!showCertificates)}
+            >
+              <TfiMoreAlt className="md:text-3xl text-2xl pr-2" /> More
+            </button>
+          </div>
         </div>
       </div>
     </div>
