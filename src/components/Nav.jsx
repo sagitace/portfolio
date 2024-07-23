@@ -63,14 +63,22 @@ const Nav = () => {
             </li>
           ))}
           <li className="nav-item p-4 animate-fade-down">
-            <a
-              href="https://green-doloritas-62.tiiny.site/"
+          <a
+              href={process.env.PUBLIC_URL + "/media/Resume.pdf"}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-transparent hover:bg-red-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
             >
               Resume
             </a>
+            {/* <a
+              href="https://green-doloritas-62.tiiny.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent hover:bg-red-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+            >
+              Resume
+            </a> */}
           </li>
         </ul>
         <div className="DESKTOP-MENU space-x-4 hidden lg:flex">
@@ -144,7 +152,7 @@ const Nav = () => {
                 ))}
                 <li className="nav-item p-4 animate-fade-down">
                   <a
-                    href="https://green-doloritas-62.tiiny.site/"
+                    href={process.env.PUBLIC_URL + "/media/Resume.pdf"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-transparent hover:bg-red-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
